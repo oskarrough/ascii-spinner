@@ -1,0 +1,59 @@
+rough-spinner {
+  /* not required but can reduce layout jumps */
+  display: inline-block;
+  min-height: 1em;
+  line-height: 1;
+}
+
+body {
+  margin: 1em;
+}
+
+pre {
+  background-image: linear-gradient(to right, hsl(0, 0%, 95%), transparent);
+  padding: 0.3em 0.4em;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background: black;
+}
+
+.Editor {
+  border: 1px solid;
+  display: flex;
+  align-items: stretch;
+  max-width: 50rem;
+}
+
+.Editor-input {
+  min-width: 300px;
+  border-width: 0 1px 0 0;
+  font-family: monospace;
+  font-size: 1rem;
+  background-image: linear-gradient(to right, hsl(0, 0%, 95%) 50%, transparent);
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.Editor-output {
+  width: 2em;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.Grid {
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 1rem;
+}
+
+.Grid rough-spinner {
+  border: 1px solid hsl(0, 0%, 90%);
+  padding: 1em;
+  min-width: 1em;
+  text-align: center;
+  margin: 0 2em 1em 0;
+}

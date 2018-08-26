@@ -1,0 +1,100 @@
+<title>&lt;rough-spinner&gt; examples</title>
+<meta charset="utf-8">
+
+<!-- Include this JavaScript file on your page -->
+<script src="/rough-spinner.js"></script>
+
+<!-- Polyfill for browsers that don't understand W3C Custom Elements -->
+<script src="https://cdn.jsdelivr.net/npm/document-register-element@1.11.0/build/document-register-element.js"></script>
+
+<!-- These styles are only for this demo page -->
+<link rel="stylesheet" href="/demo.css">
+
+<!-- Funny example! -->
+<center style="float: right">
+  <rough-spinner interval="1000">oO</rough-spinner>
+  <rough-spinner fps="20">oO</rough-spinner><br>
+  <rough-spinner spinner="2"></rough-spinner>
+</center>
+
+<h1>&lt;rough-spinner&gt;</h1>
+<p>
+  A custom element (web component) for making rough spinners with text.<br>
+  Use it for loaders, marquee-like effects or something more fun!
+</p>
+    
+<h2>How to use</h2>
+
+<p>Include this script on your page and use the element anywhere</p>
+<pre><code>&lt;script src="https://rough-spinner.glitch.me/rough-spinner.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p id="browser-support">For <a href="https://caniuse.com/#feat=custom-elementsv1">browsers that don't yet support W3C custom elements</a>, you'll want to include a polyfill as well:</p>
+
+<pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/document-register-element@1.11.0/build/document-register-element.js"&gt;&lt;/script&gt;</code></pre>
+
+<div class="Editor">
+  <textarea class="Editor-input">&lt;rough-spinner&gt;←↖↑↗→↘↓↙&lt;/rough-spinner&gt;</textarea>
+  <div class="Editor-output"></div>
+</div>
+
+<p><em>Try editing the HTML!</em></p>
+
+<script id="EditorScript">
+  function updateOutput(event) {
+    output.innerHTML = textarea.value
+  }
+  const textarea = document.querySelector('.Editor-input')
+  const output = document.querySelector('.Editor-output')
+  textarea.addEventListener('input', updateOutput)
+  updateOutput()
+</script>
+
+<h3>Define your own spinners</h3>
+<p>
+  Each character will be one frame in the animation.
+</p>
+<pre><code>&lt;rough-spinner&gt;123&lt;/rough-spinner&gt;</code></pre>
+<rough-spinner>123</rough-spinner>
+
+<pre><code>&lt;rough-spinner&gt;Hello world&lt;/rough-spinner&gt;</code></pre>
+<rough-spinner>Hello world</rough-spinner>
+
+<h3>Control the interval <small>(speed in milliseconds)</small></h3>
+<pre><code>&lt;rough-spinner interval="60"&gt;&lt;/rough-spinner&gt;</code></pre>
+<rough-spinner interval="60"></rough-spinner>
+
+<h3>or set the frames per second explicitly:</h3>
+<pre><code>&lt;rough-spinner fps="60"&gt;&lt;/rough-spinner&gt;</code></pre>
+<rough-spinner fps="60"></rough-spinner>
+
+<h3>Use one of fifteen pre-defined spinners!</h3>
+<pre><code>&lt;rough-spinner spinner="2"&gt;&lt;/rough-spinner&gt;</code></pre>
+<rough-spinner spinner="2"></rough-spinner>
+
+<ol class="Grid">
+  <li><rough-spinner spinner="1"></rough-spinner></li>
+  <li><rough-spinner spinner="2"></rough-spinner></li>
+  <li><rough-spinner spinner="3"></rough-spinner></li>
+  <li><rough-spinner spinner="4"></rough-spinner></li>
+  <li><rough-spinner spinner="5"></rough-spinner></li>
+  <li><rough-spinner spinner="6"></rough-spinner></li>
+  <li><rough-spinner spinner="7"></rough-spinner></li>
+  <li><rough-spinner spinner="8"></rough-spinner></li>
+  <li><rough-spinner spinner="9"></rough-spinner></li>
+  <li><rough-spinner spinner="10"></rough-spinner></li>
+  <li><rough-spinner spinner="11"></rough-spinner></li>
+  <li><rough-spinner spinner="12"></rough-spinner></li>
+  <li><rough-spinner spinner="13"></rough-spinner></li>
+  <li><rough-spinner spinner="14"></rough-spinner></li>
+  <li><rough-spinner spinner="15"></rough-spinner></li>
+</ol>
+
+<p>If nothing else is defined, spinner 1 will be used.</p>
+
+<hr>
+
+<p>
+  Want to contribute? Have a sweet spinner to share?<br>
+  Visit <a href="https://github.com/oskarrough/rough-spinner">github.com/oskarrough/rough-spinner</a>
+</p>
